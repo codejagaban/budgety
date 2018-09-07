@@ -17,6 +17,26 @@ var budgetController = (function () {
 
 var UIController = (function(){
     // some code here
+    var DOMstrings = {
+        inputType: '.add__type',
+        inputDescription: '.add__description',
+        inputValue: '.add__value'
+    };
+
+    return {
+        getInput: function() {
+            return {
+                type: document.querySelector(DOMstrings.inputType).value, //this can be either inc or exp
+                description: document.querySelector(DOMstrings.inputDescription).value,
+                value: document.querySelector(DOMstrings.inputValue).value
+            };
+
+        },
+        getDOMstrings: function() {
+            return DOMstrings;
+            
+        }
+    };
 
 })();
 
@@ -24,9 +44,14 @@ var UIController = (function(){
 // creates another module that interacts with the budgetController and the UIController
 var controller = (function(budgetCtrl,UICtrl) {
 
-    ctrlAddItem = function () {
+
+    var ctrlAddItem = function () {
 
         // 1.Get the field input data
+        var input = UICtrl.getInput();
+        console.log(input);
+        
+
 
         // 2.Add the item to the budgetController
 
