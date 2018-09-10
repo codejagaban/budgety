@@ -100,11 +100,11 @@ var UIController = (function(){
             // creates an HTML string with placeholder text
             if (budgetType === 'inc') {
                 element = DOMstrings.incomeContainer;
-                html = '<div class="item clearfix" id="income-%id%"><div class="item__description">%description%</div><div class="right clearfix">div class="item__value">%value%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
+                html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"><div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
                 
             } else if (budgetType === 'exp') {
                 element = DOMstrings.ExpensesContainer;
-            '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+           html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
             }
 
         // Replace the place holder text with some actual data
@@ -113,7 +113,7 @@ var UIController = (function(){
         newHtml = newHtml.replace('%value%', obj.value);
 
             //Insert the HTML into the DOM
-            document.querySelector(element).insertAdjacentHTML()
+            document.querySelector(element).insertAdjacentHTML('beforeend', newHtml)
 
         },
         getDOMstrings: function() {
@@ -153,6 +153,8 @@ var controller = (function(budgetCtrl,UICtrl) {
         console.log(newItem);
         
         // 3.Add the item to the UIController
+        UICtrl.addListItem(newItem, input.type);
+
 
         // 4. Calculate the budget
 
