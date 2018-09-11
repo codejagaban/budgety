@@ -7,6 +7,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "linea-arrows-10";
+    src: url("linea-arrows-10.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "linea-arrows-10" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrows-circle-check:before {
+    content: "\e007";
+  }
+  .icon-arrows-circle-remove:before {
+    content: "\e00e";
+  }
 
 .clearfix::after {
     content: "";
@@ -33,7 +59,7 @@ body {
 
 .top {
     height: 40vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../back.png);
     background-size: cover;
     background-position: center;
     position: relative;
