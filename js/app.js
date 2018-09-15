@@ -129,6 +129,7 @@ var UIController = (function(){
         incomeLabel: '.budget__income--value',
         expenseLabel: '.budget__expenses--value',
         percentage: '.budget__expenses--percentage', 
+        container: '.container',
 
     };
 
@@ -147,11 +148,11 @@ var UIController = (function(){
             // creates an HTML string with placeholder text
             if (budgetType === 'inc') {
                 element = DOMstrings.incomeContainer;
-                html = '<div class="item clearfix" id="income-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"><div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="icon icon-arrows-circle-remove"></i></button></div></div></div>';
+                html = '<div class="item clearfix" id="inc-%id%"> <div class="item__description">%description%</div> <div class="right clearfix"><div class="item__value">%value%</div> <div class="item__delete"><button class="item__delete--btn"><i class="icon icon-arrows-circle-remove"></i></button></div></div></div>';
                 
             } else if (budgetType === 'exp') {
                 element = DOMstrings.ExpensesContainer;
-           html = '<div class="item clearfix" id="expense-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="icon icon-arrows-circle-remove"></i></button></div></div></div>'
+           html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="icon icon-arrows-circle-remove"></i></button></div></div></div>'
             }
 
         // Replace the place holder text with some actual data
@@ -227,6 +228,7 @@ var controller = (function(budgetCtrl,UICtrl) {
                 
             };
         });
+        document.querySelector(DOM.container).addEventListener('click', ctrlDeleteItem);
     };
 
     var updateBudget = function () {
@@ -275,6 +277,19 @@ var controller = (function(budgetCtrl,UICtrl) {
 
         
     };
+
+    var ctrlDeleteItem = function (event) {
+        var itemID;
+        
+       itemID = event.target.parentNode.parentNode.parentNode.parentNode.id;
+        if (itemID) {
+
+            
+        } else {
+            
+        }
+        
+    }
     return {
 
         // initialization of everthing
