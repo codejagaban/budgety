@@ -157,10 +157,11 @@ body {
 }
 
 .add__type {
-    width: 55px;
+    width: 100px;
     border: 1px solid #e7e7e7;
     height: 44px;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'nunito', sans-serif;
     color: inherit;
     background-color: #fff;
     margin-right: 10px;
@@ -174,7 +175,7 @@ body {
     background-color: #fff;
     color: inherit;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 16px;
     padding: 12px 15px;
     margin-right: 10px;
     border-radius: 5px;
@@ -182,7 +183,7 @@ body {
 }
 
 .add__description { width: 400px;}
-.add__value { width: 100px;}
+.add__value { width: 150px;}
 
 .add__btn {
     font-size: 35px;
