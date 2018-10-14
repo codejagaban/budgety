@@ -358,3 +358,18 @@ h2 {
 .unpaid:hover .item__description {
     font-weight: 900;
 }
+
+.generatePDF {
+    padding: 10px 15px;
+    
+    border: 1px solid #8e5edc;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #8E5EDC;
+    font-size: 16px;
+    font-family: inherit;
+    color: #fff;
+    float: right;
+    margin-right: 50px;
+    
+}

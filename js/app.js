@@ -436,3 +436,21 @@ var controller = (function(budgetCtrl,UICtrl) {
 })
 (budgetController, UIController);
 controller.init();
+
+
+// Generate PDF Function
+// var doc = new jsPDF();
+// var specialElementHandlers = {
+//     '#editor' : function (element, renderer) {
+//         return true;
+//     }
+// };
+git 
+// $('.generatePDF').click(function (){
+//     doc.fromHTML($('#content').html(), 15, 15, {
+//         'width' : 200,
+//         'elementHandlers' : specialElementHandlers
+//     });
+//     doc.save('budget.pdf');
+// })
+
