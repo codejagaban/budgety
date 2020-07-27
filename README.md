@@ -1,6 +1,3 @@
 # Budgety
 
-In an attempt of learning more about vanilla javascript, I made a small budget app using javascript
-
-here's the link to the app
-https://codekyd.github.io/budgety/
+This simple Web app helps you manage and calculate your expense, you can track your income and also how much you spent on expenses from your icome 
